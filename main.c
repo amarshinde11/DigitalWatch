@@ -25,7 +25,7 @@ int main()
 {
 		uart0_init( 9600 );	/* initialize uart0 to print Time & Date on serial terminal */
 		lcd4bit_init();			/* initialize LCD to print Time & Date 16*2 LCD */
-		//RTC_init();					/* init. RTC1307 ( RTC_init initialzes i2c controller ) */
+		RTC_init();					/* init. RTC1307 ( RTC_init initialzes i2c controller ) */
 		
 		/* initialize External Interrupt for Switch Press for Time & Date Settings */
 		config_eint1( EGDE_SENSITIVE, LOW_ACTIVE );
