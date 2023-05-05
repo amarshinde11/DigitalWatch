@@ -20,6 +20,7 @@ uint8_t g_day, g_date, g_mon, g_year;	/* Date Variables */
 uint8_t g_mode;		/* mode of operation, Setting, Updation or Running */
 uint8_t field;		/* the field want to update */
 uint8_t set_flag;	/* Switch Press flag for RTC Setting */
+extern uint8_t read_flag;
 
 int main()
 {
