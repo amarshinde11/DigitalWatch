@@ -76,8 +76,8 @@ int main()
 				else if( g_mode == RUNNING ) {	/* Running Mode (default mode or selected after updation of settings) */
 							if( read_flag )
 							{
-									//RTC_Read_Time();		/* read Time fields from RTC */
-									//RTC_Read_Date();		/* read Date fields from RTC */
+									RTC_Read_Time();		/* read Time fields from RTC */
+									RTC_Read_Date();		/* read Date fields from RTC */
 									RTC_SendToUart();		/* Print onto UART0 */
 									RTC_SendToLcd();		/* Print onto LCD Display */
 									read_flag = 0;
