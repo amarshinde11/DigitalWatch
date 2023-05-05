@@ -49,7 +49,6 @@ extern uint8_t g_day, g_date, g_mon, g_year;
 extern uint8_t g_mode;
 extern uint8_t field;
 extern uint8_t set_flag;
-extern uint8_t read_flag;
 
 void RTC_init( void );
 void RTC_Set_Time( uint8_t mem, uint8_t time );
