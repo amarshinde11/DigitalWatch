@@ -48,7 +48,8 @@ int main()
 				{
 						if( set_flag == 1 ) /* if SW2 is pressed in 2 sec, flag will be set */
 						{
-							Irq_Intr_Disable( INTR_TMR0 );
+
+							DisablePeriodicTimer( TMR0 );
 							switch( field )	/* SW1 is Pressed for selecting the Setting Fields */
 							{
 									case 1: Update_Seconds(); 				break;
@@ -71,7 +72,6 @@ int main()
 						RTC_UpdateSettings( CLK_MODE );
 						g_mode = RUNNING;			/* Change The mode to Running Mode to Read & Display the RTC Clock */
 						field  = 0;
-						Irq_Intr_Enable( INTR_TMR0 );
 						EnablePeriodicTimer( TMR0 );
 				}
 				else if( g_mode == RUNNING ) {	/* Running Mode (default mode or selected after updation of settings) */
