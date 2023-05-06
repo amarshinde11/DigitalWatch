@@ -28,6 +28,7 @@ extern void TimerON(void);
 extern void config_tmr0intr( uint32_t period );
 extern void TMR0_InterHandler(void)__irq;
 extern void EnablePeriodicTimer( uint8_t timer );
+extern void DisablePeriodicTimer( uint8_t timer );
 
 #endif 	//#ifndef __TIMER_H
 
