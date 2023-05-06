@@ -53,7 +53,7 @@ void DisablePeriodicTimer( uint8_t timer )
 {
 		switch( timer )
 		{	
-				case 0: T0TCR = 0; break;
-				case 1: T1TCR = 0; break;
+				case 0: T0TCR &= ~(1); break;
+				case 1: T1TCR &= ~(1); break;
 		}
 }
